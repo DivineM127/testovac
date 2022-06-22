@@ -1,13 +1,12 @@
 package cz.divinem127.testovac;
 
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-public class Main {
-    public static KokotManager kokoti = new KokotManager();
-    public static LegManager noziska = new LegManager(new ToeManager());
-
-    public static BodyManager bodyManager = new BodyManager(kokoti, noziska);
+@SpringBootApplication
+public class Application {
 
     public static void main(String[] args) {
-
+        SpringApplication.run(Application.class, args);
     }
 }
